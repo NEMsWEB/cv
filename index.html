@@ -2,270 +2,197 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tharuja Nemitha Wanaguru</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
-    <style>
-        .hero-image {
-            animation: pulse 2s infinite alternate;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tharuja Nemitha Wanaguru</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    }
 
-        @keyframes pulse {
-            from {
-                transform: scale(1);
-            }
+    .hero-image {
+      animation: pulse 2s infinite alternate;
+    }
 
-            to {
-                transform: scale(1.05);
-            }
-        }
+    @keyframes pulse {
+      from {
+        transform: scale(1);
+      }
 
-        .skill-card {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
+      to {
+        transform: scale(1.05);
+      }
+    }
 
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
+    .skill-card,
+    .volunteer-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .volunteer-card {
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        }
-
-        .volunteer-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    .skill-card:hover,
+    .volunteer-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 
-<body class="bg-gray-100 font-sans">
+<body class="font-sans text-gray-800">
+  <header class="bg-white py-4 shadow-md sticky top-0 z-10">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="https://diyanethamag.epizy.com/" target="_blank" class="text-2xl font-bold text-blue-600 hover:underline">Tharuja N. W.</a>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#hero" class="hover:text-blue-500">Home</a>
+        <a href="#about" class="hover:text-blue-500">About</a>
+        <a href="#skills" class="hover:text-blue-500">Skills</a>
+        <a href="#volunteering" class="hover:text-blue-500">Volunteering</a>
+        <a href="#contact" class="hover:text-blue-500">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" aria-label="Open mobile menu">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="hidden md:hidden bg-gray-100" id="mobile-menu">
+      <a href="#hero" class="block py-2 px-4 hover:bg-blue-100">Home</a>
+      <a href="#about" class="block py-2 px-4 hover:bg-blue-100">About</a>
+      <a href="#skills" class="block py-2 px-4 hover:bg-blue-100">Skills</a>
+      <a href="#volunteering" class="block py-2 px-4 hover:bg-blue-100">Volunteering</a>
+      <a href="#contact" class="block py-2 px-4 hover:bg-blue-100">Contact</a>
+    </div>
+  </header>
 
-    <header class="bg-white py-4 shadow-md sticky top-0 z-10">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-800">Tharuja N. W.</a>
-            <nav class="hidden md:flex space-x-6">
-                <a href="#hero" class="text-gray-600 hover:text-blue-500 transition duration-300">Home</a>
-                <a href="#about" class="text-gray-600 hover:text-blue-500 transition duration-300">About</a>
-                <a href="#skills" class="text-gray-600 hover:text-blue-500 transition duration-300">Skills</a>
-                <a href="#volunteering" class="text-gray-600 hover:text-blue-500 transition duration-300">Volunteering</a>
-                <a href="#contact" class="text-gray-600 hover:text-blue-500 transition duration-300">Contact</a>
-            </nav>
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-            </div>
+  <section id="hero" class="py-32 bg-gradient-to-br from-blue-100 to-blue-200">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+      <div class="text-center md:text-left md:w-1/2 animate__animated animate__fadeInLeft">
+        <h1 class="text-5xl font-bold mb-4">Hi, I'm <span class="text-blue-600">Tharuja</span></h1>
+        <p class="text-lg mb-6">Motivated student, project leader, and tech-savvy communicator with experience in educational innovation and space science outreach.</p>
+        <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full transition-all inline-block">Contact Me</a>
+      </div>
+      <div class="md:w-1/2 flex justify-center animate__animated animate__fadeInRight animate__delay-1s">
+        <img src="me.jpg" alt="Tharuja" class="rounded-full w-64 h-64 object-cover shadow-lg hero-image">
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="bg-white py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">About Me</h2>
+      <p class="text-lg text-gray-700 mb-6 text-center max-w-3xl mx-auto">
+        I'm the Founder and Editor-in-Chief of <a href="https://diyanethamag.epizy.com/" target="_blank" class="text-blue-500 hover:underline">Diyanetha Educational Magazine</a>, and I've extended my digital publishing experience to support the development of the <strong>Meheuma Astronomical Magazine</strong>. As the Chief District Coordinator at <strong>SEDS Juniors</strong>, I’ve led educational initiatives that blend scientific curiosity with leadership. My background includes advanced studies in biological sciences, IT diplomas, and language certifications.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills" class="bg-gradient-to-r from-blue-50 to-blue-100 py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12">Skills</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+          <img src="https://img.icons8.com/ios-filled/50/4a90e2/language-skill.png" alt="ESL" class="mb-4 mx-auto">
+          <h3 class="text-xl font-semibold text-center mb-2">ESL Proficiency</h3>
+          <p class="text-gray-600 text-center">Fluent English communicator with formal training and certifications.</p>
         </div>
-        <div class="hidden md:hidden bg-gray-100 shadow-md mt-2 rounded-md" id="mobile-menu">
-            <a href="#hero" class="block py-2 px-4 text-gray-600 hover:bg-blue-100 hover:text-blue-500 transition duration-300">Home</a>
-            <a href="#about" class="block py-2 px-4 text-gray-600 hover:bg-blue-100 hover:text-blue-500 transition duration-300">About</a>
-            <a href="#skills" class="block py-2 px-4 text-gray-600 hover:bg-blue-100 hover:text-blue-500 transition duration-300">Skills</a>
-            <a href="#volunteering" class="block py-2 px-4 text-gray-600 hover:bg-blue-100 hover:text-blue-500 transition duration-300">Volunteering</a>
-            <a href="#contact" class="block py-2 px-4 text-gray-600 hover:bg-blue-100 hover:text-blue-500 transition duration-300">Contact</a>
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+          <img src="https://img.icons8.com/ios-filled/50/4a90e2/computer.png" alt="IT" class="mb-4 mx-auto">
+          <h3 class="text-xl font-semibold text-center mb-2">Information Technology</h3>
+          <p class="text-gray-600 text-center">Skilled in IT tools, web development, and digital project handling.</p>
         </div>
-    </header>
-
-    <section id="hero" class="bg-gradient-to-br from-gray-200 to-gray-300 py-24">
-        <div class="container mx-auto px-4 flex items-center justify-between md:flex-row flex-col-reverse">
-            <div class="w-full md:w-1/2 text-center md:text-left animate__animated animate__fadeInLeft">
-                <h2 class="text-4xl font-bold text-gray-800 mb-6">Hello, I'm <span class="text-blue-500">Tharuja</span></h2>
-                <p class="text-xl text-gray-700 mb-8">
-                    A motivated student with a strong foundation in leadership, project management, and analytical skills.
-                </p>
-                <a href="#contact" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300">
-                    <svg class="w-5 h-5 inline-block mr-2 -mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                    </svg>
-                    Contact Me
-                </a>
-            </div>
-            <div class="w-full md:w-1/2 flex justify-center animate__animated animate__fadeInRight animate__delay-1s">
-                <img src="me.jpg" alt="Profile Picture" class="rounded-full shadow-lg hero-image w-64 h-64 object-cover">
-            </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+          <img src="https://img.icons8.com/ios-filled/50/4a90e2/teamwork.png" alt="Teamwork" class="mb-4 mx-auto">
+          <h3 class="text-xl font-semibold text-center mb-2">Teamwork & Collaboration</h3>
+          <p class="text-gray-600 text-center">Effective collaborator, experienced in team-led projects and planning.</p>
         </div>
-    </section>
-
-    <section id="about" class="bg-white py-24">
-        <div class="container mx-auto px-4 text-center md:text-left animate__animated animate__fadeInUp">
-            <h2 class="text-3xl font-bold text-gray-800 mb-10">About Me</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-                <div>
-                    <p class="text-lg text-gray-700 mb-6">
-                        As the <span class="font-semibold text-blue-500">Founder of Diyanetha Magazine</span> and <span class="font-semibold text-blue-500">Chief District Coordinator at SEDS Juniors</span>, I have cultivated a strong skill set in team coordination, effective communication, and meticulous planning.
-                    </p>
-                    <p class="text-lg text-gray-700">
-                        My experience in managing diverse literary and impactful environmental projects has significantly honed my organizational abilities and reinforced my dedication to achieving goals with precision and efficiency. I am passionate about leveraging my skills to contribute meaningfully to collaborative and innovative environments.
-                    </p>
-                </div>
-                <div class="flex justify-center">
-                    <svg class="w-48 h-48 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
-                    </svg>
-                </div>
-            </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+          <img src="https://img.icons8.com/ios-filled/50/4a90e2/news.png" alt="Writing" class="mb-4 mx-auto">
+          <h3 class="text-xl font-semibold text-center mb-2">Article Writing</h3>
+          <p class="text-gray-600 text-center">Experienced in writing, editing, and managing magazine content.</p>
         </div>
-    </section>
-
-    <section id="skills" class="bg-gray-100 py-24">
-        <div class="container mx-auto px-4 animate__animated animate__fadeInUp">
-            <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-md p-8 skill-card">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-6 h-6 text-blue-500 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path>
-                            <polyline points="9 14 12 17 15 14"></polyline>
-                            <polyline points="9 21 12 24 15 21"></polyline>
-                        </svg>
-                        <h3 class="text-xl font-bold text-gray-800">ESL Proficiency</h3>
-                    </div>
-                    <p class="text-gray-700">Demonstrated ability to communicate effectively in English as a Second Language.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-8 skill-card">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-6 h-6 text-blue-500 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M10 20v-6h4v6a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2z"></path>
-                            <polyline points="4 14 10 14 10 2 14 2 14 14 20 14"></polyline>
-                        </svg>
-                        <h3 class="text-xl font-bold text-gray-800">Information Technology</h3>
-                    </div>
-                    <p class="text-gray-700">Solid understanding of fundamental Information Technology concepts and applications.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-8 skill-card">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-6 h-6 text-blue-500 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                        <h3 class="text-xl font-bold text-gray-800">Teamwork & Collaboration</h3>
-                    </div>
-                    <p class="text-gray-700">Proven ability to work effectively within a team to achieve common goals.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-8 skill-card">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-6 h-6 text-blue-500 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l-5-5 5-5M10 12H3"></path>
-                        </svg>
-                        <h3 class="text-xl font-bold text-gray-800">Article Writing</h3>
-                    </div>
-                    <p class="text-gray-700">Experienced in crafting well-structured and engaging articles on various topics.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-8 skill-card">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-6 h-6 text-blue-500 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="10 15 12 12 14 9"></polyline>
-                            <line x1="12" y1="2" x2="12" y2="12"></line>
-                        </svg>
-                        <h3 class="text-xl font-bold text-gray-800">Leadership</h3>
-                    </div>
-                    <p class="text-gray-700">Demonstrated leadership capabilities in guiding teams and initiatives.</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-md p-8 skill-card">
-                    <div class="flex items-center mb-4">
-                        <svg class="w-6 h-6 text-blue-500 mr-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                        <h3 class="text-xl font-bold text-gray-800">Project Management</h3>
-                    </div>
-                    <p class="text-gray-700">Experience in planning, executing, and overseeing projects to successful completion.</p>
-                </div>
-            </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+          <img src="https://img.icons8.com/ios-filled/50/4a90e2/leader.png" alt="Leadership" class="mb-4 mx-auto">
+          <h3 class="text-xl font-semibold text-center mb-2">Leadership</h3>
+          <p class="text-gray-600 text-center">Proven leadership through coordination roles in major organizations.</p>
         </div>
-    </section>
-
-    <section id="volunteering" class="bg-white py-24">
-        <div class="container mx-auto px-4 animate__animated animate__fadeInUp">
-            <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">Volunteering Experience</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-100 rounded-lg shadow-md p-8 volunteer-card">
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Chief District Coordinator</h3>
-                    <p class="text-gray-700 mb-2"><span class="font-semibold text-blue-500">Students for the Exploration & Development of Space (SEDS)</span></p>
-                    <p class="text-gray-600">Coordinated district-level activities and projects, fostering student engagement in space exploration and development.</p>
-                </div>
-                <div class="bg-gray-100 rounded-lg shadow-md p-8 volunteer-card">
-                    <h3 class="text-xl font-bold text-gray-800 mb-4">Founder & Editor-in-Chief</h3>
-                    <p class="text-gray-700 mb-2"><span class="font-semibold text-blue-500">Diyanetha Educational Magazine</span></p>
-                    <p class="text-gray-600">Established and managed an educational magazine, overseeing content creation, editing, and publication processes.</p>
-                </div>
-            </div>
+        <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
+          <img src="https://img.icons8.com/ios-filled/50/4a90e2/project.png" alt="Project" class="mb-4 mx-auto">
+          <h3 class="text-xl font-semibold text-center mb-2">Project Management</h3>
+          <p class="text-gray-600 text-center">Experienced in managing timelines, goals, and creative outputs.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact" class="bg-gradient-to-br from-gray-200 to-gray-300 py-24">
-        <div class="container mx-auto px-4 animate__animated animate__fadeInUp">
-            <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">Contact</h2>
-            <p class="text-lg text-gray-700 text-center mb-8">
-                Feel free to reach out to me! I'm always open to new opportunities and collaborations.
-            </p>
-            <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-8">
-                <div class="mb-6">
-                    <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone:</label>
-                    <p class="text-gray-600">+94 70 505 9026</p>
-                </div>
-                <div class="mb-6">
-                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-                    <p class="text-gray-600">nemithawanaguru@gmail.com</p>
-                </div>
-                <div class="mb-6">
-                    <label for="linkedin" class="block text-gray-700 text-sm font-bold mb-2">LinkedIn:</label>
-                    <p class="text-gray-600"><a href="https://www.linkedin.com/in/nemithawanaguru" target="_blank" class="text-blue-500 hover:underline transition duration-300">https://www.linkedin.com/in/nemithawanaguru</a></p>
-                </div>
-                <div>
-                    <label for="address" class="block text-gray-700 text-sm font-bold mb-2">Address:</label>
-                    <p class="text-gray-600">1684/18, Kotte Road, Rajagiriya</p>
-                </div>
-                <div class="mt-8 text-center">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300">
-                        Let's Connect!
-                    </button>
-                </div>
-            </div>
+  <section id="contact" class="bg-gradient-to-br from-gray-200 to-gray-300 py-24">
+    <div class="container mx-auto px-4 animate__animated animate__fadeInUp">
+      <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">Contact</h2>
+      <p class="text-lg text-gray-700 text-center mb-8">
+        Feel free to reach out to me! I'm always open to new opportunities and collaborations.
+      </p>
+      <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-8">
+        <div class="mb-6">
+          <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone:</label>
+          <p class="text-gray-600">+94 70 505 9026</p>
         </div>
-    </section>
-
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 Tharuja Nemitha Wanaguru. All rights reserved.</p>
+        <div class="mb-6">
+          <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+          <p class="text-gray-600">nemithawanaguru@gmail.com</p>
         </div>
-    </footer>
+        <div class="mb-6">
+          <label for="linkedin" class="block text-gray-700 text-sm font-bold mb-2">LinkedIn:</label>
+          <p class="text-gray-600"><a href="https://www.linkedin.com/in/nemithawanaguru" target="_blank" class="text-blue-500 hover:underline transition duration-300">https://www.linkedin.com/in/nemithawanaguru</a></p>
+        </div>
+        <div>
+          <label for="address" class="block text-gray-700 text-sm font-bold mb-2">Address:</label>
+          <p class="text-gray-600">1684/18, Kotte Road, Rajagiriya</p>
+        </div>
+        <div class="mt-8 text-center">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-md transition duration-300">
+            Let's Connect!
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Tharuja Nemitha Wanaguru. All rights reserved.</p>
+    </div>
+  </footer>
 
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-        // Basic scroll to section with smooth behavior
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+    // Basic scroll to section with smooth behavior
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-                // Close mobile menu after clicking
-                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
         });
-    </script>
+
+        // Close mobile menu after clicking
+        if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
